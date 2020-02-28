@@ -36,13 +36,6 @@ class EdgeMap:
         except KeyError:
             return None
 
-    def get(self, u, v):
-        ii = self.index(u, v)
-        if ii is not None:
-            return self.values[ii]
-        else:
-            return None
-
 
 class Graph:
     """
@@ -55,10 +48,6 @@ class Graph:
 
     def __len__(self):
         return len(self.d)
-
-    def add_edges(self, edges):
-        for u, v in edges:
-            self.add_edge(u, v)
 
     def add_edge(self, u, v):
         assert u >= 0 and u < self.size
