@@ -13,6 +13,8 @@ This library is optimized for cloud computation, however it depends on both
 [NumPy][] and [the SciPy k-d tree][ckdtree]. It's designed for use with
 [lacecore][].
 
+Currently works only with triangular meshes.
+
 Prior to version 1.0, this was a library for rendering mesh cross sections to
 SVG. That library has been renamed to [hobart-svg][].
 
