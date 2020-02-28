@@ -10,6 +10,11 @@ import vg
 from ._internal import EdgeMap, Graph
 from ._validation import check_indices
 
+__all__ = [
+    "faces_intersecting_plane",
+    "intersect_mesh_with_plane",
+]
+
 
 def faces_intersecting_plane(vertices, faces, plane):
     """
@@ -23,6 +28,9 @@ def faces_intersecting_plane(vertices, faces, plane):
     Returns:
         np.ndarray: A boolean mask indicating the faces which intersect
             the given plane.
+
+    See also:
+        https://polliwog.readthedocs.io/en/latest/#polliwog.Plane
     """
     vg.shape.check(locals(), "vertices", (-1, 3))
     vg.shape.check(locals(), "faces", (-1, 3))
@@ -60,6 +68,7 @@ def intersect_mesh_with_plane(
         list: A list of `polliwog.Polyline` instances.
 
     See also:
+        https://polliwog.readthedocs.io/en/latest/#polliwog.Plane
         https://polliwog.readthedocs.io/en/latest/#polliwog.Polyline
     """
     if neighborhood is not None:
