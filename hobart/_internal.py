@@ -5,9 +5,9 @@ class EdgeMap:
     """
 
     def __init__(self):
-        self.d = (
-            {}
-        )  # store indicies into self.values here, to make it easier to get inds or values
+        # Store indicies into self.values here, to make it easier to get inds
+        # or values.
+        self.d = {}
         self.values = []
 
     def _order(self, u, v):
@@ -75,14 +75,15 @@ class Graph:
         # Under PSF License
         # NB: MUTATES d
 
-        # counting the number of vertices with odd degree
+        # Count the number of vertices with odd degree.
         odd = [x for x in self.d if len(self.d[x]) & 1]
         odd.append(list(self.d.keys())[0])
         if not allow_multiple_connected_components and len(odd) > 3:
             return None
         stack = [odd[0]]
         path = []
-        # main algorithm
+
+        # Main algorithm.
         while stack:
             v = stack[-1]
             if v in self.d:
