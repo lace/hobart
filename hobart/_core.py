@@ -5,6 +5,7 @@
 
 import numpy as np
 from polliwog import Polyline
+from scipy.spatial import cKDTree
 import vg
 from ._internal import EdgeMap, Graph
 from ._validation import check_indices
@@ -131,13 +132,11 @@ def intersect_mesh_with_plane(
     # 6 (optional - only if 'neighborhood' is provided): Use a KDTree to select
     # the component with minimal distance to 'neighborhood'.
     if neighborhood is not None and len(components) > 1:
-        from scipy.spatial import cKDTree
-
-        kdtree = cKDTree(neighborhood)
+        tree = cKDTree(neighborhood)
 
         # The number of components will not be large in practice, so this loop
         # won't hurt.
-        means = [np.mean(kdtree.query(component)[0]) for component in components]
+        means = [np.mean(tree.query(component)[0]) for component in components]
         index = np.argmin(means)
         if ret_pointcloud:
             return components[index]
