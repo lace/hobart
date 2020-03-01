@@ -1,6 +1,6 @@
 # Imported from code.
 numpy
-polliwog==1.0.0b6
+polliwog==1.0.0b7
 scipy
 vg>=1.7.0,<2.0
 
