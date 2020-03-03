@@ -10,10 +10,7 @@ import vg
 from ._internal import EdgeMap, Graph
 from ._validation import check_indices
 
-__all__ = [
-    "faces_intersecting_plane",
-    "intersect_mesh_with_plane",
-]
+__all__ = ["faces_intersecting_plane", "intersect_mesh_with_plane"]
 
 
 def faces_intersecting_plane(vertices, faces, plane):
@@ -117,7 +114,7 @@ def intersect_mesh_with_plane(
         elif e1 is None:
             G.add_edge(e0, e2)
         else:
-            G.add_edge(e0, e1)
+            G.add_edge(e0, e1)  # pragma: no cover
 
     # 4: Find the paths for each component
     components = []
@@ -125,7 +122,7 @@ def intersect_mesh_with_plane(
     while len(G) > 0:
         path = G.pop_euler_path()
         if path is None:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "Mesh slice has too many odd degree edges; can't find a path along the edge"
             )
         component_verts = verts[path]
@@ -152,10 +149,12 @@ def intersect_mesh_with_plane(
         else:
             return Polyline(components[index], is_closed=components_closed[index])
     elif neighborhood is not None and len(components) == 1:
-        if ret_pointcloud:
-            return components[0]
+        if ret_pointcloud:  # pragma: no cover
+            return components[0]  # pragma: no cover
         else:
-            return Polyline(components[0], is_closed=components_closed[0])
+            return Polyline(
+                components[0], is_closed=components_closed[0]
+            )  # pragma: no cover
     else:
         # No neighborhood provided, so return all the components, either in a
         # pointcloud or as separate polylines.

@@ -39,7 +39,7 @@ non_intersecting_plane = Plane(np.array([0.0, 5.0, 0.0]), vg.basis.y)
 def create_open_box():
     v_on_faces_to_remove = np.nonzero(box_vertices[:, 0] < 0.0)[0]
     faces_to_remove = np.all(
-        np.in1d(box_faces.ravel(), v_on_faces_to_remove).reshape((-1, 3)), axis=1,
+        np.in1d(box_faces.ravel(), v_on_faces_to_remove).reshape((-1, 3)), axis=1
     )
     return box_faces[~faces_to_remove]
 
