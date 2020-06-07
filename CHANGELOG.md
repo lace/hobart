@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.0.0b1
+
+- Require polliwog 1.0.0b10.
+
 # 1.0.0b0
 
 Initial release of new library.
