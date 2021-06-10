@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.0.0b2
+
+- Require polliwog 1.0.0b13.
+
 # 1.0.0b1
 
 - Require polliwog 1.0.0b10.
