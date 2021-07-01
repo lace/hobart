@@ -10,6 +10,6 @@ pytest ==6.2.4
 pytest-cov == 2.12.1
 
 # Lint and formatting.
-black ==20.8b1
+black ==21.6b0
 flake8 ==3.9.2
 flake8-import-order ==0.18.1
