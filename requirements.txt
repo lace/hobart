@@ -1,4 +1,0 @@
-numpy
-polliwog==1.0.0b13
-scipy
-vg>=1.7.0,<2.0
