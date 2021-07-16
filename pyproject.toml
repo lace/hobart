@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hobart"
-version = "1.0.0b2"
+version = "1.0.0b3"
 description = "Obtain cross sections of polygonal meshes"
 authors = ["Paul Melnikow <github@paulmelnikow.com>", "Metabolize, Body Labs, and other contributors"]
 license = "BSD-2-Clause"
