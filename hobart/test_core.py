@@ -1,7 +1,7 @@
 from hobart import faces_intersecting_plane, intersect_mesh_with_plane
 import numpy as np
 from polliwog import Plane, Polyline
-import vg
+from vg.compat import v1 as vg
 
 box_vertices = np.array(
     [
