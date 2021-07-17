@@ -352,11 +352,11 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "ounce"
-version = "1.1.0"
-description = "A simple Python package to manipulate units"
+version = "1.1.1"
+description = "Fast, simple, non-fancy, and non-magical package for manipulating units of measure"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4"
 
 [[package]]
 name = "packaging"
@@ -989,8 +989,8 @@ numpy = [
     {file = "numpy-1.18.5.zip", hash = "sha256:34e96e9dae65c4839bd80012023aadd6ee2ccb73ce7fdf3074c62f301e63120b"},
 ]
 ounce = [
-    {file = "ounce-1.1.0-py3-none-any.whl", hash = "sha256:2d1337079ce3987574d1d2e895928e44c25542b0db5b98829e1718e5d5e61922"},
-    {file = "ounce-1.1.0.tar.gz", hash = "sha256:e8f158e90392ea6e6c15127672f53edabe290f670deaf931bd9cd40379a37d75"},
+    {file = "ounce-1.1.1-py3-none-any.whl", hash = "sha256:5273cf7b609ed1b9fb814af6cc3000476262ccd327bd20c0e799f6ed5052f638"},
+    {file = "ounce-1.1.1.tar.gz", hash = "sha256:b0d71780666793942aeb7e929121dad1ef709c187ee398d505544d97f89bf4a8"},
 ]
 packaging = [
     {file = "packaging-21.0-py3-none-any.whl", hash = "sha256:c86254f9220d55e31cc94d69bade760f0847da8000def4dfe1c6b872fd14ff14"},
