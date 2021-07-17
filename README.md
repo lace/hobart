@@ -29,17 +29,17 @@ SVG. That library has been renamed to [hobart-svg][].
 [lacecore]: https://github.com/lace/lacecore
 [hobart-svg]: https://github.com/lace/hobart-svg
 
-## Contribute
 
-- Issue Tracker: https://github.com/lace/hobart/issues
-- Source Code: https://github.com/lace/hobart
+## Development
 
-Pull requests welcome!
+First, [install Poetry][].
 
+After cloning the repo, run `./bootstrap.zsh` to initialize a virtual
+environment with the project's dependencies.
 
-## Support
+Subsequently, run `./dev.py install` to update the dependencies.
 
-If you are having issues, please let us know.
+[install poetry]: https://python-poetry.org/docs/#installatio
 
 
 ## Acknowledgements
