@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.0.0
+
+- Require polliwog >= 1.0.0 and vg >= 2.
+
 # 1.0.0b3
 
 - Require polliwog 1.0.0b14 and vg >= 1.11.1.

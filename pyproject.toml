@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hobart"
-version = "1.0.0b3"
+version = "1.0.0"
 description = "Obtain cross sections of polygonal meshes"
 authors = ["Paul Melnikow <github@paulmelnikow.com>", "Metabolize, Body Labs, and other contributors"]
 license = "BSD-2-Clause"
@@ -10,7 +10,7 @@ homepage = "https://hobart.readthedocs.io/en/stable/"
 repository = "https://github.com/lace/hobart"
 documentation = "https://hobart.readthedocs.io/en/stable/"
 classifiers = [
-    "Development Status :: 2 - Alpha",
+    "Development Status :: 4 - Production/Stable",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Manufacturing",
