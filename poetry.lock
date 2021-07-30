@@ -371,11 +371,11 @@ pyparsing = ">=2.0.2"
 
 [[package]]
 name = "pathspec"
-version = "0.8.1"
+version = "0.9.0"
 description = "Utility library for gitignore style pattern matching of file paths."
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
 [[package]]
 name = "pbr"
@@ -401,7 +401,7 @@ dev = ["pre-commit", "tox"]
 
 [[package]]
 name = "polliwog"
-version = "1.0.0b14"
+version = "1.0.0"
 description = "2D and 3D computational geometry library"
 category = "main"
 optional = false
@@ -410,7 +410,7 @@ python-versions = ">=3.7,<4"
 [package.dependencies]
 numpy = "<1.19.0"
 ounce = ">=1.1.0,<2.0"
-vg = ">=1.11.1"
+vg = ">=2.0.0"
 
 [[package]]
 name = "property-manager"
@@ -703,7 +703,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "tomli"
-version = "1.0.4"
+version = "1.1.0"
 description = "A lil' TOML parser"
 category = "dev"
 optional = false
@@ -748,11 +748,11 @@ python-versions = "*"
 
 [[package]]
 name = "vg"
-version = "1.11.1"
-description = "A vector-geometry toolbelt for dealing with 3D points and vectors"
+version = "2.0.0"
+description = "Linear algebra for humans: a very good vector-geometry and linear-algebra toolbelt"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4"
 
 [package.dependencies]
 numpy = "*"
@@ -772,7 +772,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<4"
-content-hash = "e0b688b032d0e903d5a0f2da535bb551a8eda20d1b5472db1a7108364acd4f47"
+content-hash = "65bc9c87618071b08cdbdb5978193b2a481b87278f3c31958845fa786434661a"
 
 [metadata.files]
 alabaster = [
@@ -1005,8 +1005,8 @@ packaging = [
     {file = "packaging-21.0.tar.gz", hash = "sha256:7dc96269f53a4ccec5c0670940a4281106dd0bb343f47b7471f779df49c2fbe7"},
 ]
 pathspec = [
-    {file = "pathspec-0.8.1-py2.py3-none-any.whl", hash = "sha256:aa0cb481c4041bf52ffa7b0d8fa6cd3e88a2ca4879c533c9153882ee2556790d"},
-    {file = "pathspec-0.8.1.tar.gz", hash = "sha256:86379d6b86d75816baba717e64b1a3a3469deb93bb76d613c9ce79edc5cb68fd"},
+    {file = "pathspec-0.9.0-py2.py3-none-any.whl", hash = "sha256:7d15c4ddb0b5c802d161efc417ec1a2558ea2653c2e8ad9c19098201dc1c993a"},
+    {file = "pathspec-0.9.0.tar.gz", hash = "sha256:e564499435a2673d586f6b2130bb5b95f04a3ba06f81b8f895b651a3c76aabb1"},
 ]
 pbr = [
     {file = "pbr-5.6.0-py2.py3-none-any.whl", hash = "sha256:c68c661ac5cc81058ac94247278eeda6d2e6aecb3e227b0387c30d277e7ef8d4"},
@@ -1017,8 +1017,8 @@ pluggy = [
     {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
 ]
 polliwog = [
-    {file = "polliwog-1.0.0b14-py3-none-any.whl", hash = "sha256:eb575710d706c1ebe4dd3c6f577a48a3e99bd9600247880d48d7a3471ccaebb1"},
-    {file = "polliwog-1.0.0b14.tar.gz", hash = "sha256:10ce6b3a907cde1a45a39ff02852ba2bd85e5c35b2f4a00df63b73323bd5e8ee"},
+    {file = "polliwog-1.0.0-py3-none-any.whl", hash = "sha256:07fa48650b3dc57001cf223cbaf31a2df1791844282ffbf5296b93d977fd843c"},
+    {file = "polliwog-1.0.0.tar.gz", hash = "sha256:460910774fe9db299ae08f8e7fde688fe8ae4d8e6b1110a5f6267e4584d5b433"},
 ]
 property-manager = [
     {file = "property-manager-3.0.tar.gz", hash = "sha256:93e76da9ae7af13cccc2cd1e3b47219950c56c125cd962aaed693894af267c54"},
@@ -1205,8 +1205,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 tomli = [
-    {file = "tomli-1.0.4-py3-none-any.whl", hash = "sha256:0713b16ff91df8638a6a694e295c8159ab35ba93e3424a626dd5226d386057be"},
-    {file = "tomli-1.0.4.tar.gz", hash = "sha256:be670d0d8d7570fd0ea0113bd7bb1ba3ac6706b4de062cc4c952769355c9c268"},
+    {file = "tomli-1.1.0-py3-none-any.whl", hash = "sha256:f4a182048010e89cbec0ae4686b21f550a7f2903f665e34a6de58ec15424f919"},
+    {file = "tomli-1.1.0.tar.gz", hash = "sha256:33d7984738f8bb699c9b0a816eb646a8178a69eaa792d258486776a5d21b8ca5"},
 ]
 typed-ast = [
     {file = "typed_ast-1.4.3-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:2068531575a125b87a41802130fa7e29f26c09a2833fea68d9a40cf33902eba6"},
@@ -1254,8 +1254,8 @@ verboselogs = [
     {file = "verboselogs-1.7.tar.gz", hash = "sha256:e33ddedcdfdafcb3a174701150430b11b46ceb64c2a9a26198c76a156568e427"},
 ]
 vg = [
-    {file = "vg-1.11.1-py3-none-any.whl", hash = "sha256:191ed442e2100067d9dc8eebb63314670a8454a0890f21843725614ba9a80249"},
-    {file = "vg-1.11.1.tar.gz", hash = "sha256:20b55eb23cfdba67f8e6f75d6f0c65a24c4ae6574591fbfe3f7d492193fe9730"},
+    {file = "vg-2.0.0-py3-none-any.whl", hash = "sha256:86eafd1f096e3dbaa79cdbae5378d019e8cf60e67b619f69f9ed40ce1eeb1e57"},
+    {file = "vg-2.0.0.tar.gz", hash = "sha256:2a3f14951c81852c76727460abb8f977bf6e15bb07480e3f3bb01da1cd362570"},
 ]
 zipp = [
     {file = "zipp-3.5.0-py3-none-any.whl", hash = "sha256:957cfda87797e389580cb8b9e3870841ca991e2125350677b2ca83a0e99390a3"},
