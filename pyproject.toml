@@ -10,7 +10,7 @@ homepage = "https://hobart.readthedocs.io/en/stable/"
 repository = "https://github.com/lace/hobart"
 documentation = "https://hobart.readthedocs.io/en/stable/"
 classifiers = [
-    "Development Status :: 4 - Production/Stable",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Manufacturing",
