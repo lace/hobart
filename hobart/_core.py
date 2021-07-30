@@ -6,7 +6,7 @@
 import numpy as np
 from polliwog import Polyline
 from scipy.spatial import cKDTree
-from vg.compat import v1 as vg
+from vg.compat import v2 as vg
 from ._internal import EdgeMap, Graph
 from ._validation import check_indices
 
