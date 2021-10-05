@@ -24,7 +24,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.7,<4"
 numpy = "*"
-polliwog = ">=1.0.0,<2"
+polliwog = ">=1.0.0,<3"
 scipy = "*"
 vg = ">=2.0.0"
 
