@@ -411,7 +411,7 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "polliwog"
-version = "1.2.0"
+version = "2.0.0"
 description = "2D and 3D computational geometry library"
 category = "main"
 optional = false
@@ -790,7 +790,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<4"
-content-hash = "231eb12e72aa00a87f92c2cccc23d555bb2350bc27d917cb4cf4b996538d034e"
+content-hash = "7758c9d79b6c5a8adcce9ec2c101d7f3b3d3e8b8ded5768329e8bf66d479dca8"
 
 [metadata.files]
 alabaster = [
@@ -1055,8 +1055,8 @@ pluggy = [
     {file = "pluggy-1.0.0.tar.gz", hash = "sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"},
 ]
 polliwog = [
-    {file = "polliwog-1.2.0-py3-none-any.whl", hash = "sha256:5babf95280604bd8725e0c89454952de4d41521a3a3b1a79d9b10c86656bf324"},
-    {file = "polliwog-1.2.0.tar.gz", hash = "sha256:283d79f1730c93ffce4880fcc663d6c3098ba09fdf01eb41561b4fe9392a47aa"},
+    {file = "polliwog-2.0.0-py3-none-any.whl", hash = "sha256:e8fc7459796759310eaaf85017a94faeb71214cb1ef8540b01b928d57096b07a"},
+    {file = "polliwog-2.0.0.tar.gz", hash = "sha256:2736417e06bc98e64f67ecc5336bf39bea2696db9289c20a1fd69a5feeada21e"},
 ]
 property-manager = [
     {file = "property-manager-3.0.tar.gz", hash = "sha256:93e76da9ae7af13cccc2cd1e3b47219950c56c125cd962aaed693894af267c54"},
