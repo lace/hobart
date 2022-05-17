@@ -29,7 +29,7 @@ scipy = "*"
 vg = ">=2.0.0"
 
 [tool.poetry.dev-dependencies]
-black = "21.12b0"
+black = "22.3.0"
 click = "8.0.1"
 coverage = "5.5"
 executor = "23.2"
