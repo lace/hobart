@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hobart"
-version = "1.1.0"
+version = "1.1.1"
 description = "Obtain cross sections of polygonal meshes"
 authors = ["Paul Melnikow <github@paulmelnikow.com>", "Metabolize, Body Labs, and other contributors"]
 license = "BSD-2-Clause"
@@ -24,7 +24,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.7,<4"
 numpy = "*"
-polliwog = ">=2.0.0,<3"
+polliwog = ">=2.0.0,<=3.0.0"
 scipy = "*"
 vg = ">=2.0.0"
 

@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.1.1
+
+- Support polliwog 3.0.0 prereleases.
+
 # 1.1.0
 
 - Require polliwog >= 2.0.0.
