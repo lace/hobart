@@ -199,3 +199,15 @@ def test_intersection_with_mulitple_non_watertight_meshes():
             # Each line changes only one coordinate, and is 0.5 long.
             assert np.sum(a == b) == 1
             assert np.linalg.norm(a - b) == 0.5
+
+
+def test_intersection_with_plane_intersecting_single_mesh_edge() -> None:
+    import pdb
+
+    pdb.set_trace()
+    intersect_mesh_with_plane(vertices=box_vertices, faces=open_box_faces, plane=None)
+    return None
+
+
+def test_intersection_with_plane_intersecting_vertex_and_edge() -> None:
+    return None
