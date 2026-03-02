@@ -10,6 +10,9 @@ inputs:
   numpy-version:
     required: false
     default: '1.26.4'
+  scipy-version:
+    required: false
+    default: '1.15.3'
   extras-param:
     required: false
     default: ''
@@ -38,18 +41,19 @@ runs:
       shell: bash
       run: test -d .venv || python -m venv .venv
 
-    - name: Install NumPy ${{ inputs.numpy-version }}
+    - name: Install NumPy ${{ inputs.numpy-version }} and SciPy ${{ inputs.scipy-version }}
       shell: bash
       run: |
         . .venv/bin/activate
         pip install --only-binary :all: \
-          numpy==${{ inputs.numpy-version }}
+          numpy==${{ inputs.numpy-version }} \
+          scipy==${{ inputs.scipy-version }}
 
     - name: Install dependencies (excluding numpy and scipy)
       shell: bash
       run: |
         poetry export -f requirements.txt --with dev ${{ inputs.extras-param }} --without-hashes | \
-          grep -Ev "^numpy" | \
+          grep -Ev "^(numpy|scipy)" | \
           ./.venv/bin/pip install -r /dev/stdin
         . .venv/bin/activate && pip install -e . --no-deps
         pip freeze
