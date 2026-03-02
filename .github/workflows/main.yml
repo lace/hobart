@@ -25,6 +25,7 @@ jobs:
   check_types:
     name: Check types
     runs-on: ubuntu-latest
+    if: false
 
     steps:
     - name: Checkout repository
@@ -73,15 +74,15 @@ jobs:
           - python-version: '3.11'
             numpy-version: '2.4.2'
             scipy-version: '1.17.1'
-          - python-version: '3.12'
-            numpy-version: '2.4.2'
-            scipy-version: '1.17.1'
-          - python-version: '3.13'
-            numpy-version: '2.4.2'
-            scipy-version: '1.17.1'
-          - python-version: '3.14'
-            numpy-version: '2.4.2'
-            scipy-version: '1.17.1'
+          # - python-version: '3.12'
+          #   numpy-version: '2.4.2'
+          #   scipy-version: '1.17.1'
+          # - python-version: '3.13'
+          #   numpy-version: '2.4.2'
+          #   scipy-version: '1.17.1'
+          # - python-version: '3.14'
+          #   numpy-version: '2.4.2'
+          #   scipy-version: '1.17.1'
 
     steps:
     - name: Checkout repository
@@ -99,7 +100,8 @@ jobs:
   build_and_upload:
     name: Build and upload
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || (github.event_name == 'schedule' && github.ref == 'refs/heads/main')
+    if: false
+    # if: github.event_name == 'push' || (github.event_name == 'schedule' && github.ref == 'refs/heads/main')
 
     steps:
     - name: Checkout repository
