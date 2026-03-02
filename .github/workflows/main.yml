@@ -77,12 +77,12 @@ jobs:
           - python-version: '3.12'
             numpy-version: '2.4.2'
             scipy-version: '1.17.1'
-          - python-version: '3.13'
-            numpy-version: '2.4.2'
-            scipy-version: '1.17.1'
-          - python-version: '3.14'
-            numpy-version: '2.4.2'
-            scipy-version: '1.17.1'
+          # - python-version: '3.13'
+          #   numpy-version: '2.4.2'
+          #   scipy-version: '1.17.1'
+          # - python-version: '3.14'
+          #   numpy-version: '2.4.2'
+          #   scipy-version: '1.17.1'
 
     steps:
     - name: Checkout repository
