@@ -54,6 +54,6 @@ runs:
       run: |
         poetry export -f requirements.txt --with dev ${{ inputs.extras-param }} --without-hashes | \
           grep -Ev "^(numpy|scipy)" | \
-          ./.venv/bin/pip install -r /dev/stdin
+          ./.venv/bin/pip install -r /dev/stdin --no-deps
         . .venv/bin/activate && pip install -e . --no-deps
         pip freeze
