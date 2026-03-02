@@ -202,10 +202,8 @@ def test_intersection_with_mulitple_non_watertight_meshes():
             assert np.linalg.norm(a - b) == 0.5
 
 
-@pytest.mark.xfail
 def test_intersection_with_plane_intersecting_vertex_and_edge() -> None:
-    # triangular prism open on two sides, so that one vertex is connected to
-    # only one face
+    # triangular prism
     vertices = np.array(
         [
             [1.0, 1.0, 1.0],
@@ -216,8 +214,19 @@ def test_intersection_with_plane_intersecting_vertex_and_edge() -> None:
             [2.0, 2.0, -2.0],
         ]
     )
-    faces = np.array([[1, 4, 5], [1, 5, 2], [2, 5, 3], [2, 3, 0], [5, 4, 3]])
-    almost_colinear_normal = vg.normalize([-1, 0, 5e-17])
+    faces = np.array(
+        [
+            [0, 1, 2],
+            [0, 3, 4],
+            [0, 4, 1],
+            [1, 4, 5],
+            [1, 5, 2],
+            [2, 5, 3],
+            [2, 3, 0],
+            [5, 4, 3],
+        ]
+    )
+    almost_colinear_normal = vg.normalize(np.array([-1, 0, 5e-17]))
     intersect_mesh_with_plane(
         vertices=vertices,
         faces=faces,
