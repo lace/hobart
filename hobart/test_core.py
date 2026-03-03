@@ -204,6 +204,9 @@ def test_intersection_with_mulitple_non_watertight_meshes():
 
 @pytest.mark.xfail
 def test_intersection_with_plane_intersecting_vertex_and_edge() -> None:
+    # We're not sure what the correct result is in this instance, but it should
+    # not be crashing.
+
     # triangular prism
     vertices = np.array(
         [
