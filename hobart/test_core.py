@@ -1,6 +1,7 @@
 from hobart import faces_intersecting_plane, intersect_mesh_with_plane
 import numpy as np
 from polliwog import Plane, Polyline
+import pytest
 from vg.compat import v2 as vg
 
 box_vertices = np.array(
@@ -199,3 +200,39 @@ def test_intersection_with_mulitple_non_watertight_meshes():
             # Each line changes only one coordinate, and is 0.5 long.
             assert np.sum(a == b) == 1
             assert np.linalg.norm(a - b) == 0.5
+
+
+@pytest.mark.xfail
+def test_intersection_with_plane_intersecting_vertex_and_edge() -> None:
+    # We're not sure what the correct result is in this instance, but it should
+    # not be crashing.
+
+    # triangular prism
+    vertices = np.array(
+        [
+            [1.0, 1.0, 1.0],
+            [2.0, 1.0, 1.0],
+            [2.0, 2.0, 1.0],
+            [1.0, 1.0, -2.0],
+            [2.0, 1.0, -2.0],
+            [2.0, 2.0, -2.0],
+        ]
+    )
+    faces = np.array(
+        [
+            [0, 1, 2],
+            [0, 3, 4],
+            [0, 4, 1],
+            [1, 4, 5],
+            [1, 5, 2],
+            [2, 5, 3],
+            [2, 3, 0],
+            [5, 4, 3],
+        ]
+    )
+    almost_colinear_normal = vg.normalize(np.array([-1, 0, 5e-17]))
+    intersect_mesh_with_plane(
+        vertices=vertices,
+        faces=faces,
+        plane=Plane(vertices[0], almost_colinear_normal),
+    )
