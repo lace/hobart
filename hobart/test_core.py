@@ -6,11 +6,16 @@ from vg.compat import v2 as vg
 
 box_vertices = np.array(
     [
-        [0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5],
-        [0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5],
-        [0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5],
+        [0.5, 0.5, 0.5],
+        [-0.5, 0.5, 0.5],
+        [0.5, -0.5, 0.5],
+        [-0.5, -0.5, 0.5],
+        [0.5, 0.5, -0.5],
+        [-0.5, 0.5, -0.5],
+        [0.5, -0.5, -0.5],
+        [-0.5, -0.5, -0.5],
     ]
-).T
+)
 
 box_faces = np.array(
     [
@@ -50,13 +55,58 @@ open_box_faces = create_open_box()
 double_open_box_faces = np.vstack([open_box_faces, len(box_vertices) + open_box_faces])
 
 
-def test_intersection():
-    # Verify that we're finding the correct number of faces to start with.
-    assert (
-        np.count_nonzero(faces_intersecting_plane(box_vertices, box_faces, Plane.xz))
-        == 8
+def test_faces_intersecting_plane_finds_faces_crossing_plane() -> None:
+    np.testing.assert_array_equal(
+        faces_intersecting_plane(box_vertices, box_faces, Plane.xz),
+        np.array(
+            [True, True, True, True, False, False, True, True, False, False, True, True]
+        ),
     )
 
+
+def test_faces_intersecting_plane_finds_faces_with_adjacent_verts() -> None:
+    np.testing.assert_array_equal(
+        faces_intersecting_plane(
+            box_vertices,
+            box_faces,
+            Plane(
+                point_on_plane=box_vertices[0],
+                unit_normal=vg.normalize(np.ones(3)),
+            ),
+        ),
+        np.array(
+            [
+                True,
+                False,
+                True,
+                False,
+                True,
+                False,
+                False,
+                False,
+                False,
+                False,
+                False,
+                False,
+            ]
+        ),
+    )
+
+
+def test_faces_intersecting_plane_finds_faces_entirely_in_the_plane() -> None:
+    result = faces_intersecting_plane(
+        box_vertices,
+        box_faces,
+        Plane(
+            point_on_plane=box_vertices[0],
+            unit_normal=vg.basis.y,
+        ),
+    )
+    assert result[0] == True
+    assert result[1] == True
+
+
+def test_intersection():
     xss = intersect_mesh_with_plane(box_vertices, box_faces, Plane.xz)
     assert isinstance(xss, list)
     assert len(xss) == 1
@@ -93,6 +143,12 @@ def test_no_intersection():
 
 # TODO: Verify that we're detecting faces that lay entirely in the plane as
 # potential intersections.
+def test_intersection_with_face_in_plane() -> None:
+    pass
+
+
+def test_intersection_with_vertex_in_plane() -> None:
+    pass
 
 
 def test_no_intersection_with_neighborhood():
